@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Desk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <button class="new-chat" type="button">＋&nbsp; New chat</button>
+
+      <nav class="history" aria-label="Chat history">
+        <h2>Today</h2>
+        <a class="active" href="#">Plan a study schedule</a>
+        <a href="#">Explain CSS flexbox</a>
+        <a href="#">Ideas for a weekend project</a>
+        <h2>Yesterday</h2>
+        <a href="#">Write a better README</a>
+      </nav>
+
+      <div class="profile">
+        <div class="avatar">Y</div>
+        <span>Your workspace</span>
+      </div>
+    </aside>
+
+    <main class="chat">
+      <header class="topbar">
+        <div class="model">Open Desk <span>⌄</span></div>
+        <button type="button" aria-label="More options">•••</button>
+      </header>
+
+      <section class="messages" id="messages">
+        <div class="welcome">
+          <div class="welcome-mark">✦</div>
+          <h1>How can I help you today?</h1>
+          <p>Ask a question, explore an idea, or start something new.</p>
+        </div>
+
+        <article class="message user">
+          <div class="avatar">Y</div>
+          <div><strong>You</strong><p>Can you help me make a simple study plan?</p></div>
+        </article>
+
+        <article class="message">
+          <div class="avatar">✦</div>
+          <div><strong>Open Desk</strong><p>Absolutely. Tell me what you want to learn and how much time you have each week. We can turn it into a small, realistic plan.</p></div>
+        </article>
+      </section>
+
+      <div class="composer-wrap">
+        <form class="composer" id="chat-form">
+          <textarea id="prompt" rows="1" placeholder="Message Open Desk..."></textarea>
+          <button class="send" type="submit" aria-label="Send message">↑</button>
+        </form>
+        <div class="note">Open Desk can make mistakes. Check important information.</div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const form = document.querySelector('#chat-form');
+    const prompt = document.querySelector('#prompt');
+    const messages = document.querySelector('#messages');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const text = prompt.value.trim();
+      if (!text) return;
+
+      messages.insertAdjacentHTML('beforeend', `
+        <article class="message user">
+          <div class="avatar">Y</div>
+          <div><strong>You</strong><p>${text}</p></div>
+        </article>
+        <article class="message">
+          <div class="avatar">✦</div>
+          <div><strong>Open Desk</strong><p>Thanks for your message. This simple demo is ready for you to connect to a real AI service.</p></div>
+        </article>`);
+
+      prompt.value = '';
+      prompt.style.height = 'auto';
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+
+    prompt.addEventListener('input', function () {
+      prompt.style.height = 'auto';
+      prompt.style.height = `${Math.min(prompt.scrollHeight, 120)}px`;
+    });
+
+    prompt.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        form.requestSubmit();
+      }
+    });
+  </script>
+</body>
+</html>
