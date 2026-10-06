@@ -53,6 +53,13 @@ pnpm-debug.log*
 coverage/
 *.lcov
 
+# 資料庫（本地開發資料）
+*.db
+*.sqlite
+*.sqlite3
+notes.db
+api/notes.db
+
 # 其他常見本機設定
 *.local
 
