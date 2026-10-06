@@ -6,6 +6,9 @@ from pydantic import BaseModel
 from starlette.responses import FileResponse
 from starlette.staticfiles import StaticFiles
 
+from app.api.notes import router as notes_router
+from app.core.database import Base, engine
+
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -40,6 +43,9 @@ app = FastAPI(
     root_path=APP_ROOT_PATH,
 )
 app.include_router(api_router)
+app.include_router(notes_router)
+
+Base.metadata.create_all(bind=engine)
 
 
 @app.middleware("http")
