@@ -1,0 +1,181 @@
+{
+  "defaultSection": "dashboard",
+  "menu": [
+    { "id": "dashboard", "label": "儀表板", "icon": "▣" },
+    { "id": "courses", "label": "課程管理", "icon": "▤" },
+    { "id": "students", "label": "學生管理", "icon": "◉" },
+    { "id": "attendance", "label": "出缺席", "icon": "◌" },
+    { "id": "reports", "label": "統計報表", "icon": "◫" }
+  ],
+  "sections": {
+    "dashboard": {
+      "title": "教務儀表板",
+      "cards": [
+        {
+          "label": "開課總數",
+          "value": "18",
+          "description": "本學期已開立課程總數，新增 2 門跨域課程。",
+          "meta": "較上月",
+          "change": "+12%",
+          "trend": "success"
+        },
+        {
+          "label": "學生總數",
+          "value": "426",
+          "description": "本學院在籍學生數，已完成基本資料核對。",
+          "meta": "進度",
+          "change": "+4.8%",
+          "trend": "success"
+        },
+        {
+          "label": "待簽核事項",
+          "value": "9",
+          "description": "含修課異動、成績異議、課程異動申請。",
+          "meta": "需處理",
+          "change": "-3",
+          "trend": "warning"
+        },
+        {
+          "label": "學習進度",
+          "value": "87%",
+          "description": "多數學生已完成本週課程任務與線上作業提交。",
+          "meta": "本週",
+          "change": "+6%",
+          "trend": "success"
+        },
+        {
+          "label": "缺曠紀錄",
+          "value": "23",
+          "description": "本週缺席人數偏高，請關注高風險學生名單。",
+          "meta": "提醒",
+          "change": "+2",
+          "trend": "danger"
+        },
+        {
+          "label": "公告數",
+          "value": "14",
+          "description": "教育部通知、校務公告與班級通知正在分發中。",
+          "meta": "已發布",
+          "change": "+5",
+          "trend": "neutral"
+        }
+      ]
+    },
+    "courses": {
+      "title": "課程管理",
+      "cards": [
+        {
+          "label": "授課班別",
+          "value": "06",
+          "description": "目前負責 6 個班級的教學與評量管理。",
+          "meta": "共計",
+          "change": "+1",
+          "trend": "success"
+        },
+        {
+          "label": "課程大綱",
+          "value": "100%",
+          "description": "大綱內容已建立並同步到課程平台。",
+          "meta": "完成率",
+          "change": "+2%",
+          "trend": "success"
+        },
+        {
+          "label": "評量設定",
+          "value": "4",
+          "description": "本學期仍有 4 項評量模板等待確認。",
+          "meta": "待確認",
+          "change": "-1",
+          "trend": "warning"
+        }
+      ]
+    },
+    "students": {
+      "title": "學生管理",
+      "cards": [
+        {
+          "label": "高關注學生",
+          "value": "17",
+          "description": "多次缺課或成績退步的學生需要追蹤輔導。",
+          "meta": "名單",
+          "change": "-2",
+          "trend": "warning"
+        },
+        {
+          "label": "修課人數",
+          "value": "132",
+          "description": "學生選課狀況穩定，選課完成率達 94%。",
+          "meta": "已選",
+          "change": "+8",
+          "trend": "success"
+        },
+        {
+          "label": "聯絡率",
+          "value": "91%",
+          "description": "關懷信件、電話聯繫與面談回覆率持續提升。",
+          "meta": "回覆率",
+          "change": "+3%",
+          "trend": "success"
+        }
+      ]
+    },
+    "attendance": {
+      "title": "出缺席",
+      "cards": [
+        {
+          "label": "出席率",
+          "value": "92%",
+          "description": "本週出席率較上週提升，班級參與度良好。",
+          "meta": "週統計",
+          "change": "+5%",
+          "trend": "success"
+        },
+        {
+          "label": "請假",
+          "value": "11",
+          "description": "請假申請已完成核准或待審核數量為 11 份。",
+          "meta": "申請",
+          "change": "+2",
+          "trend": "warning"
+        },
+        {
+          "label": "曠課",
+          "value": "7",
+          "description": "仍需持續提醒並與導師協調關懷方案。",
+          "meta": "本週",
+          "change": "-1",
+          "trend": "danger"
+        }
+      ]
+    },
+    "reports": {
+      "title": "統計報表",
+      "cards": [
+        {
+          "label": "期中成績",
+          "value": "78.4",
+          "description": "平均分數維持穩定，需提升低分群學生支持。",
+          "meta": "平均",
+          "change": "+1.2",
+          "trend": "success"
+        },
+        {
+          "label": "作業繳交率",
+          "value": "89%",
+          "description": "作業繳交與線上測驗完成率已達預期標準。",
+          "meta": "繳交率",
+          "change": "+7%",
+          "trend": "success"
+        },
+        {
+          "label": "輔導紀錄",
+          "value": "31",
+          "description": "本月已完成 31 筆個別輔導與學習回饋紀錄。",
+          "meta": "已完成",
+          "change": "+5",
+          "trend": "neutral"
+        }
+      ]
+    }
+  }
+}
